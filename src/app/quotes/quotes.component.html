@@ -1,3 +1,11 @@
-<p>
-  quotes works!
-</p>
+<h1>Quotes App</h1>
+<hr>
+
+<ul>
+    <div *ngFor = 'let quote of quotes;let i = index'>
+      <li>{{quotes.name}}</li>
+      <button (click)='choiceMaker'>Choices</button>
+      <app-quote-details *ngIf="quote.showDescription"[quote]='quote' (isComplete)='completeQuote'($event,i)></app-quote-details>
+    </div>    
+</ul>
+<p *ngIf='quotes.length > 8'>Delete a quote to add yours</p>

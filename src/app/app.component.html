@@ -4,9 +4,10 @@
 </div>
 <hr>
 <ul>
-  <li *ngFor='let quote of quotes'>{{Quotes}}</li>
+  <li *ngFor='let quote of quotes'>{{quote.name}}</li>
 </ul>
-  <p *ngIf = 'quotes.length >8'>Delete a quote to add yours</p>
+<li></li>
+  <p *ngIf='quotes.length > 8'>Delete a quote to add yours</p>
 
   
 
