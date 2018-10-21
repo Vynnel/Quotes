@@ -7,8 +7,8 @@ import {Quotes} from './quotes';
 })
 export class AppComponent {
    quotes = [
-     new Quotes(1, 'One who laughs, cries', 'Vynnel'),
-     new Quotes(2, 'needless to say...', 'Vynnel'),
-     new Quotes(3, 'one word, bacon', 'Vynnel'),
+     new Quotes(1, 'One who laughs, cries', 'Vynnel', new Date(2018, 12, 12) ),
+     new Quotes(2, 'needless to say...', 'Vynnel', new Date(2018, 12, 10)),
+     new Quotes(3, 'one word, bacon', 'Vynnel', new Date(2018, 12, 11)),
     ];
 }
