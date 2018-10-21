@@ -2,10 +2,11 @@
 <div style="text-align:center">
   <h1>Quotes App</h1>
 </div>
+<hr>
 <ul>
-  <li *ngFor='let Quote of Quotes'>{{Quotes}}</li>
+  <li *ngFor='let quote of quotes'>{{Quotes}}</li>
 </ul>
-  <p *ngIf = 'Quotes.length >8'>Delete a quote to add yours</p>
+  <p *ngIf = 'quotes.length >8'>Delete a quote to add yours</p>
 
   
 
