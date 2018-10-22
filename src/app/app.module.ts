@@ -3,18 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
-import { GoalDetailsComponent } from './goal-details/goal-details.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
-    GoalDetailsComponent,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    QuoteFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,20 @@
 <h1>Quotes App</h1>
 <hr>
+<div class="container">
+  <div class="row">
+    <app-quote-form (addQuote) = "addNewQuote($event)"></app-quote-form>
+  </div>
+  <div class="row" *ngFor="let quote of quotes; let i='index'">
+    <div class="row">
+        <li>{{quotes.name}}</li>
+        <button class="btn btn-primary" (click)='choiceMaker(i)'>Choices</button>    
+    </div>
+  <div class="row" *ngIf="quote.showDescription">
+    <app-quote-details [quote]='quote' (isComplete)= 'deleteGoal($event,i)'></app-quote-details>
+  </div>   
+  </div>
+</div>
 
-<ul>
-    <div *ngFor = 'let quote of quotes;let i = index'>
-      <li>{{quotes.name}}</li>
-      <button (click)='choiceMaker'>Choices</button>
-      <app-quote-details *ngIf="quote.showDescription"[Quote]='quote' (isComplete)='completeQuote'($event,i)></app-quote-details>
-    </div>    
-</ul>
+ 
+
 <p *ngIf='quotes.length > 8'>Delete a quote to add yours</p>

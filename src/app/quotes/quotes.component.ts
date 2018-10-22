@@ -13,19 +13,21 @@ export class QuotesComponent implements OnInit {
     new Quotes(2, 'needless to say...', 'Vynnel'),
     new Quotes(3, 'one word, bacon', 'Vynnel'),
   ];
-  completeQuote(isComplete,index){
-    if (isComplete){
-      this.Quotes.splice(index,1);
-    }
-  }
+  deleteQuote(isComplete,index){
+   if (isComplete){
+     const toDelete=confirm(`Are you sure you want to delete ${this.Quotes[index].name}`)
 
-  choiceMaker(index){
+     if(toDelete){
+       this.Quotes.splice(index,1)
+     }
+   }
+
+   this.deleteQuote(index, 1); {
     this.Quotes[index].showDescription=!this.Quotes[index].showDescription;
+    }
+   }
+
   }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }
