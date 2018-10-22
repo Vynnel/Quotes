@@ -6,7 +6,7 @@
   </div>
   <div class="row" *ngFor="let quote of quotes; let i='index'">
     <div class="row">
-        <li>{{quotes.name}}</li>
+        <li>{{quote.name}}</li>
         <button class="btn btn-primary" (click)='choiceMaker(i)'>Choices</button>    
     </div>
   <div class="row" *ngIf="quote.showDescription">

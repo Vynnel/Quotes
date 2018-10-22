@@ -8,24 +8,25 @@ import {Quotes} from '../quotes';
 })
 export class QuotesComponent implements OnInit {
 
-  Quotes = [
+  quotes = [
     new Quotes(1, 'One who laughs, cries', 'Vynnel'),
     new Quotes(2, 'needless to say...', 'Vynnel'),
     new Quotes(3, 'one word, bacon', 'Vynnel'),
   ];
   deleteQuote(isComplete,index){
    if (isComplete){
-     const toDelete = confirm(`Are you sure you want to delete ${this.Quotes[index].name}`)
+     const toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
 
      if(toDelete){
-       this.Quotes.splice(index, 1);
+       this.quotes.splice(index, 1);
      }
    }
 
    this.deleteQuote(index, 1); {
-    this.Quotes[index].showDescription = !this.Quotes[index].showDescription;
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
     }
    }
+   choiceMaker();
 
    ngOnInit() {}
 
