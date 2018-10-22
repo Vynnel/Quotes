@@ -9,7 +9,7 @@ import {Quotes} from '../quotes';
 })
 export class QuoteDetailsComponent implements OnInit {
 
-  @Input() quotes: Quotes;
+  @Input() quote: Quotes;
   @Output()isComplete= new EventEmitter<boolean>();
 
   quoteComplete(complete:boolean){
